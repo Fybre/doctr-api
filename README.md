@@ -2,8 +2,12 @@
 
 **Docker image based on the sample API framework by Mindee**
 
+Provides OCR capabilities to your applications via REST endpoints.
+
 docTR Github:
 https://github.com/mindee/doctr
+
+Docker Image: https://hub.docker.com/repository/docker/fybre/doctr-api
 
 I have just added a couple of endpoints for extracting plain text from files, rather than json dictionaries, and made it a bit easier to run with docker compose.
 
