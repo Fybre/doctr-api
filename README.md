@@ -30,6 +30,8 @@ docker-compose.yaml
           - 8080:8080
 
 ## Just use mine:
+This will create a directory, download the preconfigured docker-compose definition, which will pull my docker image from dockerhub, then run it.
+
     mkdir doctr-api
     cd doctr-api
     wget https://raw.githubusercontent.com/Fybre/doctr-api/refs/heads/main/docker-compose.yaml
