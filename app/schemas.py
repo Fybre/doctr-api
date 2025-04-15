@@ -184,3 +184,6 @@ class KIEOut(BaseModel):
     language: dict[str, str | float | None] = Field(..., examples=[{"value": "en", "confidence": 0.99}])
     dimensions: tuple[int, int] = Field(..., examples=[(100, 100)])
     predictions: list[KIEElement]
+
+class OCRJsonOut(BaseModel):
+    result: str = Field(..., examples=["Extracted OCR from document"])

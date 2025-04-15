@@ -24,9 +24,7 @@ async def perform_ocr(request: OCRIn = Depends(), files: list[UploadFile] = [Fil
         raise HTTPException(status_code=400, detail=str(e))
 
     out = predictor(content)
-
     result = out.render()
-
     return result
 
 @router.post("/single/", summary="Perform OCR on single file - don't forget trailing /")
@@ -34,14 +32,11 @@ async def perform_ocr(file: UploadFile = File(...)):
     """Runs docTR OCR model to analyze the input image, returns text"""
     request = OCRIn()
     try:
-        # generator object to list
         content = await get_document(file)
         predictor = init_predictor(request)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
     out = predictor(content)
-
     result = out.render()
-
     return result
