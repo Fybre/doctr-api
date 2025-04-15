@@ -49,6 +49,8 @@ The following endpoints are available:
 
 **/ocrtext/single/** - Simple endpoint to perform OCR on a single file, no other parameters needed
 
-**/ocrjson/** - Performs OCR, returns json - result.export()
+**/ocrjson/** - Performs OCR, returns simple json with extracted text
+
+**/ocrjson/single/** - Simple endpoint to perform OCR on a single file, no other parameters needed. Returns simple json with extracted text
 
 
