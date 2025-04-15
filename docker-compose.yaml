@@ -1,0 +1,6 @@
+services:
+  doctr-api:
+    image: fybre/doctr-api
+    container_name: doctr-api
+    ports:
+      - 8080:8080
